@@ -1,9 +1,9 @@
 /* global data */
 
 document.addEventListener('keydown', turnCar);
+var $car = document.querySelector('.car');
 
 function turnCar(e) {
-  var $car = document.querySelector('.car');
   if (e.key === 'ArrowDown') {
     $car.className = 'car rotateDown';
     data.direction = 'south';
@@ -24,3 +24,10 @@ function turnCar(e) {
     data.direction = 'east';
   }
 }
+
+// console.log($car.getBoundingClientRect());
+
+var carCoordinates = $car.getBoundingClientRect();
+
+data.coordinates.x = carCoordinates.x;
+data.coordinates.y = carCoordinates.y;
