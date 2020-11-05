@@ -4,6 +4,7 @@ body {
 
 .car {
   width: 15%;
+  position: absolute;
 }
 
 .rotateDown {
