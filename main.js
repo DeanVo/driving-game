@@ -25,7 +25,11 @@ function turnCar(e) {
   }
 }
 
-// console.log($car.getBoundingClientRect());
+document.addEventListener('keydown', startCar);
+
+function startCar(e) {
+  console.log(e.code);
+}
 
 var carCoordinates = $car.getBoundingClientRect();
 
