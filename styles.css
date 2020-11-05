@@ -8,12 +8,20 @@ body {
 
 .rotateDown {
   transform: rotate(90deg);
+  transition: 0.25s;
 }
 
 .rotateLeft {
   transform: rotate(180deg);
+  transition: 0.25s;
 }
 
 .rotateUp {
   transform: rotate(270deg);
+  transition: 0.25s;
+}
+
+.rotateRight {
+  transform: rotate(0deg);
+  transition: 0.25s;
 }
