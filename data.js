@@ -1,5 +1,9 @@
 /* exported data */
 
 var data = {
-  direction: 'east'
+  direction: 'east',
+  coordinates: {
+    x: '',
+    y: ''
+  }
 };
