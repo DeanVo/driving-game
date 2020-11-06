@@ -26,6 +26,7 @@ function turnStartCar(e) {
 
   if (e.code === 'Space') {
     setInterval(moveCar, 16);
+    data.engineRunning = !data.engineRunning;
   }
 
 }
