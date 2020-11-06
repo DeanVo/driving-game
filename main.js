@@ -41,23 +41,25 @@ function turnStartCar(e) {
 document.addEventListener('keydown', moveCar);
 
 function moveCar(e) {
-  if (data.direction === 'east') {
-    data.coordinates.x += 6;
-    $car.style.left = data.coordinates.x + 'px';
-  }
+  if (data.engineRunning === true) {
+    if (data.direction === 'east') {
+      data.coordinates.x += 6;
+      $car.style.left = data.coordinates.x + 'px';
+    }
 
-  if (data.direction === 'south') {
-    data.coordinates.y += 6;
-    $car.style.top = data.coordinates.y + 'px';
-  }
+    if (data.direction === 'south') {
+      data.coordinates.y += 6;
+      $car.style.top = data.coordinates.y + 'px';
+    }
 
-  if (data.direction === 'north') {
-    data.coordinates.y -= 6;
-    $car.style.top = data.coordinates.y + 'px';
-  }
+    if (data.direction === 'north') {
+      data.coordinates.y -= 6;
+      $car.style.top = data.coordinates.y + 'px';
+    }
 
-  if (data.direction === 'west') {
-    data.coordinates.x -= 6;
-    $car.style.left = data.coordinates.x + 'px';
+    if (data.direction === 'west') {
+      data.coordinates.x -= 6;
+      $car.style.left = data.coordinates.x + 'px';
+    }
   }
 }
