@@ -5,5 +5,6 @@ var data = {
   coordinates: {
     x: 0,
     y: 0
-  }
+  },
+  engineRunning: false
 };

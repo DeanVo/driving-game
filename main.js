@@ -2,8 +2,10 @@
 
 document.addEventListener('keydown', turnStartCar);
 var $car = document.querySelector('.car');
+var intervalID;
 
 function turnStartCar(e) {
+
   if (e.key === 'ArrowDown') {
     $car.className = 'car rotateDown';
     data.direction = 'south';
@@ -25,7 +27,13 @@ function turnStartCar(e) {
   }
 
   if (e.code === 'Space') {
-    setInterval(moveCar, 16);
+    if (data.engineRunning === false) {
+      intervalID = setInterval(moveCar, 16);
+      data.engineRunning = true;
+    } else {
+      clearInterval(intervalID);
+      data.engineRunning = false;
+    }
   }
 
 }
