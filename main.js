@@ -30,11 +30,6 @@ function turnStartCar(e) {
 
 }
 
-var carCoordinates = $car.getBoundingClientRect();
-
-data.coordinates.x = carCoordinates.x;
-data.coordinates.y = carCoordinates.y;
-
 document.addEventListener('keydown', moveCar);
 
 function moveCar(e) {
