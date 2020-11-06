@@ -1,9 +1,9 @@
 /* global data */
 
-document.addEventListener('keydown', turnCar);
+document.addEventListener('keydown', turnStartCar);
+var $car = document.querySelector('.car');
 
-function turnCar(e) {
-  var $car = document.querySelector('.car');
+function turnStartCar(e) {
   if (e.key === 'ArrowDown') {
     $car.className = 'car rotateDown';
     data.direction = 'south';
@@ -23,4 +23,17 @@ function turnCar(e) {
     $car.className = 'car rotateRight';
     data.direction = 'east';
   }
+
+  if (e.code === 'Space') {
+    setInterval(moveCar, 16);
+  }
+
+}
+
+document.addEventListener('keydown', moveCar);
+
+function moveCar(e) {
+  data.coordinates.x += 6;
+  $car.style.top = data.coordinates.y + 'px';
+  $car.style.left = data.coordinates.x + 'px';
 }
